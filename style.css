@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+body{
+    margin: 0;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+h3{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 40px;
+    color: #ed553b;
+    margin: 20px 0;
+}
+.Calculator{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    grid-column: 1/3;
+    width: 100%;
+}
+.Calculator h3{
+    grid-column: 1 / 5;
+}
+#output{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: solid 2px #20639b;
+    margin-right: 100px;
+    grid-column: 1 / 5;
+    outline: none;
+    font-family:  'Ubuntu', sans-serif;
+    font-size: 22px;
+}
+#output:focus{ border: solid 2px #75b6eb;}
+.button{
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #f6d55c;
+    border: none;
+    outline: none;
+    font-family:  'Ubuntu', sans-serif;
+    font-size: 32px;
+    color: #3caea3
+}
+.button:hover{
+    opacity: .7;
+}
+.result{
+    grid-column: 2 / 5;
+    background-color: #3caea3;
+    color: #f6d55c;
+}
+.Addition , .division,
+.multiplication , .subtraction{
+    background-color: #3caea3;
+    color: #f6d55c;
+}
+._0 ,._1 ,._2 ,._3 ,._4 ,._5 ,._6 ,._7 ,._8 ,._9{
+    background-color: #e4e4e4;
+    color: #ed553b;
+}
+.Transfers{
+    grid-column: 4/6;
+}
+.Transfers input[type="text"]{
+    width: 30%;
+    height: 50px;
+    border-radius: 10px;
+    border: solid 2px #20639b;
+    outline: none;
+    font-family:  'Ubuntu', sans-serif;
+    font-size: 22px;
+    margin-top: 15px;
+}
+.Transfers input[type="button"]{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #f6d55c;
+    border: none;
+    outline: none;
+    font-family:  'Ubuntu', sans-serif;
+    font-size: 32px;
+    color: #3caea3;
+    margin: 0 10px 0 10px ;
+    transition: .3s linear;
+}
+.Transfers input[type="text"]:focus{ 
+    border: solid 2px #75b6eb;
+}
+.Transfers input[type="button"]:hover{
+    border-radius: 100%;
+}
+@media (max-width: 700px){
+    body{
+        margin: 0;
+        padding: 50px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .Transfers h3{
+        margin-top: 50px;
+    }
+}
